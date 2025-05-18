@@ -1,0 +1,51 @@
+.soon {
+  @include container;
+  margin-bottom: 94px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 208px;
+  }
+}
+
+.soon__wrapper {
+  padding-right: 25%;
+  padding-bottom: 47px;
+  border-bottom: 1px solid rgba($color-basic, 0.5);
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0 90px;
+    padding-right: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.soon__title {
+  @include title;
+  margin-bottom: 16px;
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / -1;
+    margin-bottom: 93px;
+  }
+}
+
+.soon__text {
+  margin-bottom: 21px;
+
+  @media (min-width: $desktop) {
+    @include font(36px, 44px);
+    grid-column: 1 / -1;
+    margin-bottom: 47px;
+  }
+}
+
+.soon__btn {
+  margin-bottom: 12px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}

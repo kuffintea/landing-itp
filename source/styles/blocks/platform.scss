@@ -1,0 +1,42 @@
+.platform {
+  @include container;
+  margin-bottom: 62px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 51px;
+  }
+}
+
+.platform__wrapper {
+  padding-bottom: 82px;
+  border-bottom: 1px solid rgba($color-basic, 0.5);
+
+  @media (min-width: $desktop) {
+    padding-bottom: 168px;
+  }
+}
+
+.platform__title {
+  @include title;
+  text-align: center;
+  margin-bottom: 46px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 137px;
+  }
+}
+
+.platform__list-wrapper {
+  @media (min-width: $desktop) {
+    margin-left: 196px;
+    margin-right: 218px;
+  }
+}
+
+.platform__list {
+  margin-bottom: 6px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}

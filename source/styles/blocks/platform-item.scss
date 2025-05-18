@@ -1,0 +1,18 @@
+.platform-item__text {
+  @include font(12px, 15px);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 14px;
+
+  @media (min-width: $desktop) {
+    @include font(24px, 29px);
+    text-align: end;
+    padding-right: 11%;
+    margin-bottom: 0;
+  }
+}
+
+.platform-item__image {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,76 @@
+.goals {
+  @include container;
+  margin-bottom: 64px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 183px;
+    position: relative;
+
+    &::before {
+      @include pseudo-element(auto, auto);
+      @include background;
+      @include image-set("phone-handed-desktop");
+      background-position: right;
+      position: absolute;
+      inset: -13% -18px -13% 55%;
+    }
+  }
+}
+
+.goals__wrapper {
+  padding-bottom: 85px;
+  border-bottom: 1px solid rgba($color-basic, 0.5);
+
+  @media (min-width: $desktop) {
+    padding-bottom: 271px;
+  }
+}
+
+.goals__title {
+  @include title;
+  margin-bottom: 24px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 138px;
+  }
+}
+
+
+.goals__list {
+  @media (min-width: $desktop) {
+    padding-right: 50%;
+  }
+}
+
+.goals__list-item {
+  @include font(15px, 18px);
+  margin-bottom: 22px;
+  display: flex;
+  gap: 4px;
+
+  &::before {
+    @include pseudo-element(27px, 30px);
+    @include background(12px);
+    background-color: $color-accent-main;
+    background-image: url("./../../icons/check.svg");
+    border: 3px solid $color-alternate;
+    border-radius: 50%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    @include font(32px, 39px);
+    gap: 52px;
+    align-items: center;
+    margin-bottom: 97px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      background-size: 28px;
+    }
+  }
+}

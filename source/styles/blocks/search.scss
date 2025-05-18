@@ -1,0 +1,78 @@
+.search {
+  @include background(82% 100%, right);
+  @include container;
+  background-image: $gradient-basic;
+  margin-bottom: 61px;
+
+  @media (min-width: $desktop) {
+    background-image: none;
+    padding-top: 117px;
+    margin-bottom: 174px;
+    position: relative;
+
+    &::before {
+      @include pseudo-element(auto, auto);
+      @include background;
+      background-image: radial-gradient(50% 50% at 50% 50%, #6600f5, rgba($color-alternate, 0));
+      position: absolute;
+      inset: 5% 0% -14% 10%;
+      z-index: -1;
+    }
+  }
+}
+
+.search__wrapper {
+  padding-bottom: 92px;
+  border-bottom: 1px solid rgba($color-basic, 0.5);
+  position: relative;
+
+  @media (min-width: $desktop) {
+    padding-bottom: 131px;
+  }
+}
+
+.search__title {
+  @include title;
+  padding-right: 20%;
+  margin-bottom: 37px;
+
+  @media (min-width: $desktop) {
+    padding-right: 0;
+    margin-bottom: 170px;
+  }
+}
+
+.search__text {
+  @include font(8px, 10px);
+  @include background(9px 13px, right 8px bottom 7px);
+  width: 187px;
+  background-color: rgba($color-alternate, 0.95);
+  background-image: url("./../../icons/shield.svg");
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba($color-basic, 0.25);
+  padding: 13px 26px 20px 12px;
+  margin: 12% auto 0 35%;
+  position: absolute;
+  z-index: 1;
+
+  @media (min-width: $desktop) {
+    @include font(32px, 39px);
+    width: 51%;
+    background-size: 58px 56px;
+    background-position: right 32px bottom 21px;
+    border-radius: 30px;
+    padding: 49px 110px 62px 50px;
+    margin-top: -8%;
+    margin-left: 45.5%;
+  }
+}
+
+.search__image {
+  width: 75%;
+  transform: translateX(-22px);
+
+  @media (min-width: $desktop) {
+    width: 67%;
+    transform: translateX(0);
+  }
+}
